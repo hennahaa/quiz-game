@@ -1,2 +1,3 @@
-# GroupExercise
-Group exercise for GIT - a quiz
+# GroupExercise - Peli
+
+AW Academy ryhmätehtävä, 3 eri pelin yhdistäminen
