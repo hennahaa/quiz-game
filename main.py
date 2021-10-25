@@ -67,6 +67,26 @@ def peli2():
 
     print(f"Sait {pisteet} pistettä!")
 
+def peli3():
+
+  kysymys1 = "Mikä on maailman pienin valtio?\n"
+  kysymys2 = "Mikä on maailman pisin joki?\n"
+  kysymys3 = "Kuinka monta raitaa Yhdysvaltain lipussa on?\n"
+  kysymykset = [kysymys1,kysymys2,kysymys3]
+  vastaukset = ["vatikaani", "niili", "13"]
+  oikein = 0
+  j = 0
+
+  for i in kysymykset:
+      vastaus = input(kysymykset[j])
+      if vastaus.lower() == vastaukset[j]:
+          oikein +=1
+          j+=1
+      else:
+          print("Nope.")
+          j+=1                          
+  print(f"Pisteet: {oikein}/3")
+
 #while-loop joka kutsuu kysymyksentulostusta, käsittelee pelaajan syötteen
 #1 pelaa 0 lopeta
 def suorita():
@@ -75,13 +95,13 @@ def suorita():
         print()
         kysymys = int(input("Oletko valmis pelaamaan? 1 = Pelaa, 0 = Lopeta "))
         if kysymys == 1:
-            peli = int(input("Mitä peliä pelataan? Peli1, peli2 vai peli3? "))
+            peli = int(input("Mitä peliä pelataan? 1, 2 vai 3? "))
             if peli == 1:
               peli1()
             if peli == 2:
               peli2()
             if peli == 3:
-              pass
+              peli3()
         elif kysymys == 0:
             break
         else:
